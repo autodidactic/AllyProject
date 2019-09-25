@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Scripts\" />
+    <Folder Include="UnitTests\" />
+    <Folder Include="Scripts\HTML\" />
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="$(AspNetCoreAppRuntimeFrameworkVersion)">
+      <IsImplicitlyDefined>true</IsImplicitlyDefined>
+      <PrivateAssets>All</PrivateAssets>
+      <Publish>true</Publish>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="MSTest.TestFramework" Version="2.0.0" />
+    <PackageReference Include="LiteDB" Version="4.1.4" />
+    <PackageReference Include="Angular4" Version="1.1.0" />
+    <PackageReference Include="EntityFramework" Version="6.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Scripts\app.module.ts" />
+    <None Remove="Scripts\app.service.ts" />
+    <None Remove="Scripts\app.component.ts" />
+    <None Remove="Scripts\Script.js" />
+    <None Remove="Scripts\app.component.spec.ts" />
+    <None Remove="Scripts\app.service.spec.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\app.module.ts" />
+    <TypeScriptCompile Include="Scripts\app.service.ts" />
+    <TypeScriptCompile Include="Scripts\app.component.ts" />
+    <TypeScriptCompile Include="Scripts\app.component.spec.ts" />
+    <TypeScriptCompile Include="Scripts\app.service.spec.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\index.html" />
+  </ItemGroup>
+</Project>

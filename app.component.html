@@ -1,0 +1,11 @@
+﻿<div style="text-align:center">
+    <h1>
+        Auction Items
+    </h1>
+    <h2>BIDDING CHART</h2>
+     
+        <span *ngFor="let auctionIt of auctions">
+            {{auctionIt.CurrentBid}} - {{record.BidderName}} --->  {{auctionIt.maxAutoBidAmountmaxCurrent}}
+            <br />
+        </span>
+</div>
